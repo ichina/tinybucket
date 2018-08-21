@@ -16,6 +16,7 @@ module Tinybucket
       :Profile,
       :Project,
       :PullRequest,
+      :Participant,
       :Repository,
       :Team
     ].each do |klass_name|

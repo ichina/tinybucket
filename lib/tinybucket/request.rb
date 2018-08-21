@@ -49,6 +49,7 @@ module Tinybucket
     end
 
     def extract_data_from_params(params)
+      puts params
       if params.key?('data') && !params['data'].nil?
         params['data']
       else
