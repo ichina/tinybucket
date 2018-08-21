@@ -14,6 +14,7 @@ module Tinybucket
       :Projects,
       :PublicRepos,
       :PullRequests,
+      :Participants,
       :Repos,
       :Teams,
       :Watchers
@@ -54,7 +55,8 @@ module Tinybucket
       [
         :Base,
         :Commits,
-        :Comments
+        :Comments,
+        :Participants
       ].each do |klass_name|
         autoload klass_name
       end

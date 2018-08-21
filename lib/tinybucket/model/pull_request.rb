@@ -136,6 +136,15 @@ module Tinybucket
         raise NotImplementedError
       end
 
+      # Get Participants on this pull requests
+      #
+      # @param options [Hash]
+      # @return [Tinybucket::Resource::PullRequest::Participants]
+      def participants(options = {})
+        participants_resource(options)
+      end
+
+
       private
 
       def commits_resource(options = {})
@@ -144,6 +153,11 @@ module Tinybucket
 
       def comments_resource(options = {})
         Tinybucket::Resource::PullRequest::Comments.new(self, options)
+      end
+
+      def participants_resource(options = {})
+        puts "participants called"
+        Tinybucket::Resource::PullRequest::Participants.new(self, options)
       end
 
       def pull_request_api
